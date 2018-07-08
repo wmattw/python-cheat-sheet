@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122002540-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-122002540-1');
+    </script>
+
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <link rel="stylesheet"
+          href="highlight/styles/hybrid.css">
+    <script src="highlight/highlight.pack.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+        .card-columns {
+            margin: 5px;
+
+        }
+
+        .no_whitespace {
+            white-space: normal;
+            font-size: 12px;
+        }
+
+        .card {
+            font-family: "Lucida Console", Monaco, monospace;
+            /*min-width: 30rem;
+            max-width: 30rem;
+            display: inline-block;*/
+        }
+
+        .card-columns {
+        }
+
+    </style>
+    <title>python-cheat-sheet</title>
+</head>
+<body>
+<div class="card-columns">
+    <div class="card p-0 bg-light">
+        <!-- INTRODUCTION -->
+        <div class="card-header">Python Beginner's Cheat Sheet by <a href="https://www.mattoncode.pl">wmatt</a></div>
+        <div class="card-text p-2" style="font-size: 13px">
+            <div style="padding-left: 0;">
+                - You can download Python from <a href="https://www.python.org/downloads/"> here</a>
+            </div>
+            <pre><code class="python no_whitespace" style="text-align: left;">
+                '''
+                <br> Hello, hope you'll find this cheat-sheet useful. I wanted to include
+                <br> the very basics on Python as hints for beginners and reminder for
+                <br> more experienced programmers.
+                <br>
+                <br> And btw. this is how multiline comment looks like in Python
+                <br>'''</code></pre>
+        </div>
+
+    </div>
+    <!-- STYLE GUIDE -->
+    <div class="card p-0 bg-light">
+        <div class="card-header">Style (micro) guide</div>
+
+        <div class="card-text p-2" style="font-size: 13px">
+            <div style="padding-left: 0;">
+                - Use 4 spaces for indentation (no tabs).<br>
+                - CapWords for class names.<br>
+                - lowercase_with_underscores for functions and variables.
+            </div>
+            <pre><code class="python no_whitespace" style="text-align: left;">
+                >>> import this # Try this </code></pre>
+        </div>
+    </div>
+    <!-- VARIABLES -->
+    <div class="card p-0 bg-light">
+        <div class="card-header">Variables</div>
+
+        <div class="card-text p-2" style="font-size: 13px">
+            <div style="padding-left: 0;">
+                - In Python every variable is an object.<br>
+                - You do not need to declare variables before using them.
+            </div>
+            <pre><code class="python no_whitespace" style="text-align: left;">
+                >>> my_bool = True # Bool
+                <br>>>> my_int = 7 # Int
+                <br>>>> example_float = 7.0 # Float
+                <br>>>> my_name = 'Matt' # String</code></pre>
+        </div>
+    </div>
+    <!-- STRINGS -->
+    <div class="card p-0 bg-light">
+        <div class="card-header">Strings</div>
+
+        <div class="card-text p-2" style="font-size: 13px">
+            <div style="padding-left: 0;">
+                - Python strings are arrays of bytes representing unicode characters.<br>
+                - Single character in a string is a string with a length 1.
+            </div>
+            <pre><code class="python no_whitespace" style="text-align: left;">
+                >>> name = "Cartman" # New string
+                <br>>>> name[4] # Get 5th character (index starts at 0)
+                <br>'m'
+                <br>>>> name[-1] # Counting backwards starts from -1
+                <br>'n'
+                <br>>>> name[2:5] # Get characters with index in interval [2:5)
+                <br>'rtm'
+                <br>>>> name + ' is super cool' # Combine strings
+                <br>'Cartman is super cool'
+                <br>>>> 'rt' in name # Check if string occurs in other string
+                <br>True
+                </code></pre>
+        </div>
+    </div>
+
+    <!-- TUPLES -->
+    <div class="card p-0 bg-light">
+        <div class="card-header">Tuples</div>
+        <div class="card-text p-2" style="font-size: 13px">
+            <div style="padding-left: 0;">
+                - Tuple in Python is a equence of immutable objects.<br>
+                - Tuple cannot be changed.
+            </div>
+            <pre><code class="python no_whitespace" style="text-align: left;">
+                >>> >>> tuple = ('One', 'Two', 3, 4) # New tuple
+                <br>>>> tuple[1] # Get item at index 1 (index starts at 0)
+                <br>'Two'
+                <br>>>> tuple[1] = 'Three' # Cannot change it
+                <br>>>> # Should get TypeError: 'tuple' object does not support item assignment
+                <br>>>> len(tuple)
+                <br>4
+                </code></pre>
+        </div>
+    </div>
+
+    <!-- LISTS -->
+    <div class="card p-0 bg-light">
+        <div class="card-header">Lists</div>
+
+        <div class="card-text p-2" style="font-size: 13px">
+            <div style="padding-left: 0;">
+                - List in Python is mutable, changeable and ordered sequence of elements.<br>
+                - It is a collections of items with assigned index to each item.
+            </div>
+            <pre><code class="python no_whitespace" style="text-align: left;">
+                >>> names = ['Stan', 'Kyle', 'Eric', 'Kenny', 'Butters', 'Jimmy'] # New list
+                <br>>>> names[1] # Get 5th character (index starts at 0)
+                <br>'Kyle'
+                <br>>>> names[-1] # Similar to strings behaviour
+                <br>'Jimmy'
+                <br>>>> names[2:4] # List slicing
+                <br>['Eric', 'Kenny']
+                <br>>>> len(names) # Number of items
+                <br>6
+                <br>>>> names + ['Chef', 'The Coon', 'Professor Chaos'] # Combine lists
+                <br>['Stan', 'Kyle', 'Eric', 'Kenny', 'Chef', 'The Coon', 'Professor Chaos']
+                <br>>>> 'Kyle' in names # Check if string occurs in a list
+                <br>True
+                </code></pre>
+        </div>
+    </div>
+
+    <!-- DICTIONARIES -->
+    <div class="card p-0 bg-light">
+        <div class="card-header">Dictionaries</div>
+
+        <div class="card-text p-2" style="font-size: 13px">
+            <div style="padding-left: 0;">
+                - Stores key-value pairs.<br>
+                - Unordered, changeable and indexed.
+            </div>
+            <pre><code class="python no_whitespace" style="text-align: left;">
+                >>> mustang_gt = {'manufacturer' : 'Ford',
+                <br>... 'power' : '460bhp',
+                <br>... 'torque' : '570Nm'}
+                <br>>>> mustang_gt['torque'] # access dictionary value
+                <br>'570Nm'
+                <br>>>> mustang_gt['compression_ratio'] = '12.0:1' # set new key-value
+                </code></pre>
+        </div>
+    </div>
+
+    <!-- IF's -->
+    <div class="card p-0 bg-light">
+        <div class="card-header">IF statements</div>
+
+        <div class="card-text p-2" style="font-size: 13px">
+            <div style="padding-left: 0;">
+                - Evaluates if statement is true or false.<br>
+                - Runs code only if condition is true.
+            </div>
+            <pre><code class="python no_whitespace" style="text-align: left;">
+                >>> number_five = 5
+                <br>>>> number_ten = 10
+                <br>>>> number_one = 1
+                <br>>> if number_five > number_ten:
+                <br>... &nbsp;&nbsp;&nbsp;&nbsp;print('5 > 10')
+                <br>... elif number_five == number_one:
+                <br>... &nbsp;&nbsp;&nbsp;&nbsp;print('5 == 1')
+                <br>... elif number_five == 5:
+                <br>... &nbsp;&nbsp;&nbsp;&nbsp;print('5 == 5')
+                <br>... else:
+                <br>... &nbsp;&nbsp;&nbsp;&nbsp;print('Sorry..')
+                <br>5 == 5
+                <br>>>>
+                <br>>>># You can use and or not
+                <br>>>> if 'Eric' in names and 'Butters' in names or not False:
+                <br>... &nbsp;&nbsp;&nbsp;&nbsp;print(True)
+                <br>...
+                <br>True
+                </code></pre>
+        </div>
+    </div>
+
+    <!-- FOR loops -->
+    <div class="card p-0 bg-light">
+        <div class="card-header">FOR loop</div>
+
+        <div class="card-text p-2" style="font-size: 13px">
+            <div style="padding-left: 0;">
+                - Python FOR statement iterates over a sequence in order.
+                - Executes a sequence of statements multiple times.<br>
+                - Break statement stops the loop before it has looped through all the items
+            </div>
+            <pre><code class="python no_whitespace" style="text-align: left;">
+                >>> games = ['Wolfenstein', 'Doom', 'Mortal Kombat', 'Dead Space']
+                <br>>> for game in games:
+                <br>... &nbsp;&nbsp;&nbsp;&nbsp;print(game)
+                <br>... &nbsp;&nbsp;&nbsp;&nbsp;if game == 'Mortal Kombat':
+                <br>... &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break
+                <br>Wolfenstein
+                <br>Doom
+                <br>Mortal Kombat
+                </code></pre>
+        </div>
+    </div>
+    <!-- WIP -->
+    <div class="card p-0 bg-light">
+        <div class="card-header">WORK IN PROGRESS</div>
+        <div class="card-text p-2" style="font-size: 13px">
+            <div style="padding-left: 0;">
+                - More updates to come...
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
